@@ -1,16 +1,14 @@
 import tweepy
 import time
 import json
-'''i =
-l = 79
-head = """'''
+
 # Load state from a file
 def load_state():
     try:
         with open('state.json', 'r') as f:
             return json.load(f)
     except FileNotFoundError:
-        return {'i': 4144 + 79, 'l': 79, 'head': "The Philsopher's Stone CH-8 Lines of 373 lines\n"}  # default starting values
+        return {'i': 0, 'l': 0, 'head': "The Philsopher's Stone CH-1 Lines of 552 lines\n"}  # default starting values
 
 # Save state to a file
 def save_state(i, l, head):
@@ -23,11 +21,11 @@ l = state['l']
 head = state['head']
 
 # Your Twitter credentials
-api_key = "G0vsaAbMGMPn5AlP6ckEyHx7i"
-api_secret = "hg6Csh9gloVVmJWAmFP407uIDc1LQXQFzfRi3bEtniQGKUJuDD"
-bearer_token = r"AAAAAAAAAAAAAAAAAAAAANCIoAEAAAAAUmwUE6SWeels7FU1uiKVJxR%2FPQg%3Dqji9pk2rU8g78kAHejha7w7w9gCVoZHObywWY9K2702KiHHrIF"
-access_token = "1668244310536622081-2VOF3NAK4OrCSpWghvmhos9f2Q5Ogj"
-access_token_secret = "nYZEgd2BoBXgyu6tgvFvQSzi8TM8UNW8DIWr3DvLgjcrB"
+api_key = "[api_key]"
+api_secret = "[api_secret]"
+bearer_token = r"[bearer_token]"
+access_token = "[access_token]"
+access_token_secret = "[access_token_secret]"
 # Connecting to Twitter API
 client = tweepy.Client(bearer_token, api_key, api_secret, access_token, access_token_secret)
 auth = tweepy.OAuth1UserHandler(api_key, api_secret, access_token, access_token_secret)
